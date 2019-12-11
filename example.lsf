@@ -1,0 +1,9 @@
+#!/bin/bash
+#BSUB -q gpu
+#BSUB -o %J.out
+#BSUB -e %J.err
+#BSUB -R "rusage[ngpus_shared=2]"
+
+cd /home/jm2511a/YOLO
+
+/app/python3/bin/python3 run.py
